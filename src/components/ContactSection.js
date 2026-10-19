@@ -20,7 +20,7 @@ import {
 } from "lucide-react";
 
 export default function ContactSection() {
-  const { t, isRTL, getWhatsAppLink, whatsappNumber } = useLanguage();
+  const { t, isRTL, getWhatsAppLink, whatsappNumber, emailAddress } = useLanguage();
   const ArrowIcon = isRTL ? ArrowLeft : ArrowRight;
 
   const [formData, setFormData] = useState({
@@ -171,6 +171,27 @@ ${details}
                 <Phone className="w-4 h-4" />
                 <span>{t.contact.directCta}</span>
                 <ArrowIcon className="w-4 h-4" />
+              </a>
+
+              {/* Email Direct Link */}
+              <a
+                href={`mailto:${emailAddress || "contact@iskindria.com"}`}
+                className="w-full py-3 px-4 rounded-xl bg-slate-900/90 hover:bg-slate-800/90 border border-sky-500/30 hover:border-sky-400 text-white font-bold text-sm flex items-center justify-between shadow-lg shadow-sky-500/10 transition-all cursor-pointer group"
+              >
+                <div className="flex items-center gap-2.5">
+                  <div className="w-8 h-8 rounded-lg bg-sky-500/20 text-sky-400 flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <Mail className="w-4 h-4" />
+                  </div>
+                  <div className="text-start">
+                    <div className="text-[11px] text-slate-400 font-medium leading-none mb-1">
+                      {t.contact.emailLabel || (isRTL ? "البريد الإلكتروني المباشر" : "Official Email")}
+                    </div>
+                    <div className="font-mono text-xs sm:text-sm text-sky-300 font-semibold leading-none">
+                      {emailAddress || "contact@iskindria.com"}
+                    </div>
+                  </div>
+                </div>
+                <ArrowIcon className="w-4 h-4 text-sky-400 group-hover:translate-x-1 transition-transform" />
               </a>
             </div>
           </div>

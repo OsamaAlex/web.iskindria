@@ -7,6 +7,7 @@ const LanguageContext = createContext();
 
 export const WHATSAPP_NUMBER = "201159666279"; // Updated WhatsApp Contact Number (+201159666279)
 export const DISPLAY_PHONE = "+201159666279";
+export const EMAIL_ADDRESS = "contact@iskindria.com";
 
 export function LanguageProvider({ children }) {
   const [lang, setLang] = useState("ar");
@@ -55,6 +56,7 @@ export function LanguageProvider({ children }) {
         t: currentTranslations,
         getWhatsAppLink,
         whatsappNumber: WHATSAPP_NUMBER,
+        emailAddress: EMAIL_ADDRESS,
       }}
     >
       {children}

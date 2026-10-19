@@ -533,6 +533,9 @@ export const translations = {
       badge: "تواصل مباشر",
       title: "ابدأ من هنا",
       subtitle: "أرسل لنا تفاصيل مشروعك، وسنراجع طلبك ونعود إليك بأفضل تصور مناسب لاحتياجاتك وميزانيتك.",
+      email: "contact@iskindria.com",
+      emailLabel: "البريد الإلكتروني المباشر",
+      emailCta: "راسلنا عبر البريد الإلكتروني",
       checklistTitle: "ما الذي ترسله لبدء المشروع سريعاً؟",
       checklistItems: [
         "فكرة المشروع وطبيعة عملك",
@@ -611,6 +614,8 @@ export const translations = {
       ],
       ctaTitle: "لديك مشروع جاهز للبدء؟",
       ctaBtn: "ابدأ الآن عبر واتساب",
+      email: "contact@iskindria.com",
+      emailLabel: "البريد الإلكتروني",
       rights: "© Web Alex — جميع الحقوق محفوظة",
       madeWith: "تصميم وتطوير فائق الأداء والسرعة"
     }
@@ -1149,6 +1154,9 @@ export const translations = {
       badge: "Direct Contact",
       title: "Start Right Here",
       subtitle: "Send us your project requirements, and we will review and return with the ideal roadmap for your budget.",
+      email: "contact@iskindria.com",
+      emailLabel: "Official Email Address",
+      emailCta: "Send Us an Email",
       checklistTitle: "What to share for instant project kick-off?",
       checklistItems: [
         "Project idea and business background",
@@ -1227,6 +1235,8 @@ export const translations = {
       ],
       ctaTitle: "Ready to launch your project?",
       ctaBtn: "Start Now on WhatsApp",
+      email: "contact@iskindria.com",
+      emailLabel: "Official Email",
       rights: "© Web Alex — All Rights Reserved",
       madeWith: "Engineered for speed, conversion, and high impact"
     }

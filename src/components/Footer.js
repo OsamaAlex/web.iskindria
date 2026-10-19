@@ -11,10 +11,11 @@ import {
   Heart,
   Globe,
   CheckCircle2,
+  Mail,
 } from "lucide-react";
 
 export default function Footer() {
-  const { t, isRTL, getWhatsAppLink } = useLanguage();
+  const { t, isRTL, getWhatsAppLink, emailAddress } = useLanguage();
   const ArrowIcon = isRTL ? ArrowLeft : ArrowRight;
 
   return (
@@ -42,11 +43,19 @@ export default function Footer() {
               {t.footer.tagline}
             </p>
 
-            <div className="pt-2 flex items-center gap-3">
+            <div className="pt-2 flex flex-wrap items-center gap-2.5">
               <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-900 border border-slate-800 text-xs text-slate-300">
                 <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
                 <span>{isRTL ? "متاح للعمل الفوري" : "Available for Projects"}</span>
               </div>
+
+              <a
+                href={`mailto:${emailAddress || "contact@iskindria.com"}`}
+                className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-900/90 hover:bg-sky-950/40 border border-slate-800 hover:border-sky-500/40 text-xs text-slate-300 hover:text-sky-300 transition-colors group"
+              >
+                <Mail className="w-3.5 h-3.5 text-sky-400 group-hover:scale-110 transition-transform" />
+                <span className="font-mono text-xs">{emailAddress || "contact@iskindria.com"}</span>
+              </a>
             </div>
           </div>
 
@@ -88,7 +97,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Quick WhatsApp Action (2 cols) */}
+          {/* Quick Contact Action (2 cols) */}
           <div className="lg:col-span-2 space-y-3 text-start">
             <h4 className="text-sm font-bold text-white uppercase tracking-wider">
               {t.footer.ctaTitle}
@@ -98,21 +107,40 @@ export default function Footer() {
                 ? "ابدأ محادثتك واستلم النموذج الأولي في ساعتين."
                 : "Kick off your project and receive a prototype in 2 hours."}
             </p>
-            <a
-              href={getWhatsAppLink()}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs shadow-md transition-colors"
-            >
-              <MessageCircle className="w-3.5 h-3.5" />
-              <span>{t.footer.ctaBtn}</span>
-            </a>
+            <div className="flex flex-col gap-2">
+              <a
+                href={getWhatsAppLink()}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs shadow-md transition-colors"
+              >
+                <MessageCircle className="w-3.5 h-3.5" />
+                <span>{t.footer.ctaBtn}</span>
+              </a>
+
+              <a
+                href={`mailto:${emailAddress || "contact@iskindria.com"}`}
+                className="inline-flex items-center justify-center gap-2 px-3 py-2 rounded-xl bg-slate-900/90 hover:bg-slate-800 border border-slate-800 hover:border-sky-500/40 text-sky-300 hover:text-white font-medium text-xs transition-colors"
+              >
+                <Mail className="w-3.5 h-3.5 text-sky-400" />
+                <span className="font-mono text-xs truncate">{emailAddress || "contact@iskindria.com"}</span>
+              </a>
+            </div>
           </div>
         </div>
 
         {/* Bottom Rights Strip */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
-          <p>{t.footer.rights}</p>
+          <div className="flex items-center gap-3 flex-wrap">
+            <p>{t.footer.rights}</p>
+            <span className="hidden sm:inline text-slate-700">•</span>
+            <a
+              href={`mailto:${emailAddress || "contact@iskindria.com"}`}
+              className="text-slate-400 hover:text-sky-400 font-mono transition-colors"
+            >
+              {emailAddress || "contact@iskindria.com"}
+            </a>
+          </div>
           <div className="flex items-center gap-1">
             <span>{t.footer.madeWith}</span>
           </div>
