@@ -1197,121 +1197,26 @@ html:not(.dark) .hero-metric-label {
 }
 
 /* =========================================================
-   CONTINUOUS CINEMATIC VIDEO-LIKE CAMERA MOTION FOR HERO SLIDER
+/* =========================================================
+   HERO BACKGROUND SLIDER - CRISP UNSTRETCHED PRESENTATION
    ========================================================= */
 
-@keyframes cinematicCamera1 {
-  0% {
-    transform: scale(1.08) translate3d(0%, 0%, 0);
-  }
-  50% {
-    transform: scale(1.14) translate3d(-1.5%, -1%, 0);
-  }
-  100% {
-    transform: scale(1.20) translate3d(-3%, -2%, 0);
-  }
-}
-
-@keyframes cinematicCamera2 {
-  0% {
-    transform: scale(1.20) translate3d(-2.5%, -1.5%, 0);
-  }
-  50% {
-    transform: scale(1.14) translate3d(0%, 0%, 0);
-  }
-  100% {
-    transform: scale(1.08) translate3d(2%, 1.5%, 0);
-  }
-}
-
-@keyframes cinematicCamera3 {
-  0% {
-    transform: scale(1.10) translate3d(2%, -1.5%, 0);
-  }
-  50% {
-    transform: scale(1.16) translate3d(0%, 0.5%, 0);
-  }
-  100% {
-    transform: scale(1.12) translate3d(-2.5%, 1%, 0);
-  }
-}
-
-@keyframes cinematicCamera4 {
-  0% {
-    transform: scale(1.18) translate3d(-2%, 2%, 0);
-  }
-  50% {
-    transform: scale(1.12) translate3d(1%, 0%, 0);
-  }
-  100% {
-    transform: scale(1.08) translate3d(2.5%, -1.5%, 0);
-  }
-}
-
-@keyframes cinematicCamera5 {
-  0% {
-    transform: scale(1.08) translate3d(-2%, 1.5%, 0);
-  }
-  50% {
-    transform: scale(1.14) translate3d(0.5%, -0.5%, 0);
-  }
-  100% {
-    transform: scale(1.19) translate3d(2%, -2%, 0);
-  }
-}
-
-@keyframes cinematicCamera6 {
-  0% {
-    transform: scale(1.19) translate3d(2%, -1%, 0);
-  }
-  50% {
-    transform: scale(1.13) translate3d(-0.5%, 1%, 0);
-  }
-  100% {
-    transform: scale(1.08) translate3d(-2.5%, 0%, 0);
-  }
-}
-
-.cinematic-camera-0 {
-  animation: cinematicCamera1 26s cubic-bezier(0.37, 0, 0.63, 1) infinite alternate;
-  will-change: transform;
+.hero-bg-slide-image {
+  transform: none !important;
+  will-change: opacity;
+  image-rendering: auto;
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  transform-style: preserve-3d;
 }
 
-.cinematic-camera-1 {
-  animation: cinematicCamera2 28s cubic-bezier(0.37, 0, 0.63, 1) infinite alternate;
-  will-change: transform;
-  backface-visibility: hidden;
-  transform-style: preserve-3d;
-}
-
-.cinematic-camera-2 {
-  animation: cinematicCamera3 25s cubic-bezier(0.37, 0, 0.63, 1) infinite alternate;
-  will-change: transform;
-  backface-visibility: hidden;
-  transform-style: preserve-3d;
-}
-
-.cinematic-camera-3 {
-  animation: cinematicCamera4 29s cubic-bezier(0.37, 0, 0.63, 1) infinite alternate;
-  will-change: transform;
-  backface-visibility: hidden;
-  transform-style: preserve-3d;
-}
-
-.cinematic-camera-4 {
-  animation: cinematicCamera5 27s cubic-bezier(0.37, 0, 0.63, 1) infinite alternate;
-  will-change: transform;
-  backface-visibility: hidden;
-  transform-style: preserve-3d;
-}
-
+.cinematic-camera-0,
+.cinematic-camera-1,
+.cinematic-camera-2,
+.cinematic-camera-3,
+.cinematic-camera-4,
 .cinematic-camera-5 {
-  animation: cinematicCamera6 30s cubic-bezier(0.37, 0, 0.63, 1) infinite alternate;
-  will-change: transform;
-  backface-visibility: hidden;
-  transform-style: preserve-3d;
+  animation: none !important;
+  transform: none !important;
 }
 
 /* =========================================================

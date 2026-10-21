@@ -90,7 +90,7 @@ export default function HeroSection() {
               <img
                 src={slide.src}
                 alt={slide.label[isRTL ? "ar" : "en"]}
-                className={`w-full h-full object-cover cinematic-camera-${idx}`}
+                className="w-full h-full object-cover object-center hero-bg-slide-image pointer-events-none select-none"
                 loading={idx <= 1 ? "eager" : "lazy"}
               />
             </div>
